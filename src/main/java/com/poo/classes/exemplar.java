@@ -1,6 +1,6 @@
 package com.poo.classes;
 
-public class exemplar {
+public class Exemplar {
 int id;
 Livro livro;
 }

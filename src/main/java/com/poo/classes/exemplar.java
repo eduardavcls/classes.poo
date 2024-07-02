@@ -1,6 +1,22 @@
 package com.poo.classes;
 
 public class Exemplar {
-int id;
-Livro livro;
+static int id;
+static String livro;
+
+public int getId() {
+    return id;
+
+}
+public void setId(int id) {
+    Exemplar.id = id;
+
+}
+public String getlivro() {
+    return livro;
+}
+public void setnome(String nome) {
+    Exemplar.livro = livro;
+}
+
 }

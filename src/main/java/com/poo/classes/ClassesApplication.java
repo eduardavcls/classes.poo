@@ -2,61 +2,60 @@ package com.poo.classes;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+import com.poo.classes.exemplar.Autor02;
+import com.poo.classes.exemplar.Devolucao02;
+import com.poo.classes.exemplar.Editora02;
+import com.poo.classes.exemplar.Emprestimo02;
+import com.poo.classes.exemplar.Endereco02;
+import com.poo.classes.exemplar.Exemplar02;
+import com.poo.classes.exemplar.ExemplarEmprestimo02;
+import com.poo.classes.exemplar.Livro02;
+import com.poo.classes.exemplar.Pessoa02;
+import com.poo.classes.individual.endereco;
 @SpringBootApplication
 public class ClassesApplication {
 
-	/**
-	 * @param args
-	 */
+	
 	public static void main(String[] args) {
 		SpringApplication.run(ClassesApplication.class, args);
 	limpa();
-    Exemplar exemplar = new Exemplar();
-    Exemplar.id = 34567891-2;
-    Exemplar.livro = "Memórias póstumas de Brás Cubas";
-  
-	Livro Livro = new Livro();
-    Livro.id = 123456789-0;
-    Livro.titulo = " Memórias póstumas de Brás Cubas";
-    Livro.edicao =" primeira edição";
-    Livro.ano = 1881;
-    editora.editora = "Autêntica";
-    autor.autor = "Machado de Assis";
 
-    autor autor = new autor();
-	autor.id = 234567890-1;
-    autor.nome = "Machado de Assis";
+        Pessoa02 pessoa = new Pessoa02(  "Patrícia",  000000066 , "Avenida x");
+        pessoa.setId(123456789);
+        System.out.println(pessoa.getId());
 
+        Editora02 editora = new Editora02( "Editora Globo Livros");
+        editora.setId(234567890);
+        System.out.println(editora.getId());
 
-    endereco endereco = new endereco();
-    endereco.id = 456789123-2;
-    endereco.uf = "Rio de Janeiro-33";
-    endereco.cidade = "Rio de Janeiro";
-    endereco.logradouro = "Avenida X";
-    endereco.complemento = "Bloco 3";
-    endereco.tipo ="Área";
+        Devolucao02 devolucao = new Devolucao02();
+        devolucao.setId(345678901);
+        System.out.println(devolucao.getId());
 
-    editora editora = new editora();
-    editora.id = 567891234-3;
-    editora.nome = "Autêntica";
+        Endereco02 endereco = new Endereco02( 123456789-0);
+        endereco.setId(456789012);
+        System.out.println(endereco.getId());
 
-    pessoa pessoa = new pessoa();
-    pessoa.id = 678912345-4;
-    pessoa.nome = "Eduarda";
-    pessoa.rg = 2222228222;
+        Emprestimo02 emprestimo = new Emprestimo02();
+        emprestimo.setId(567890123);
+        System.out.println(emprestimo.getId());
 
-    devolucao devolucao = new devolucao();
-    devolucao.id = 789123456-5;
-    devolucao.dataDevolvido = (int) (2024-07-09);
+        Autor02 autor = new Autor02( "Machado de Assis");
+        autor.setId(678901234);
+        System.out.println(autor.getId());
 
-    emprestimo emprestimo = new emprestimo();
-    emprestimo.id = 789123456-6;
-    emprestimo.pessoa = (String) " Maria Eduarda";
-    emprestimo.dataEmprestimo = (int) (2024-07-02);
-    emprestimo.dataPrevisaoDevolucao =  (int) (2024-07-09);
+        Livro02 livro = new Livro02( 1234567890 , "primeira edição" , 1881 , " Editora Globo Livros" , "Machado de Assis");
+        livro.setId(1234567890);
+        System.out.println(livro.getId());
 
+        ExemplarEmprestimo02 exemplarEmprestimo = new ExemplarEmprestimo02();
+        exemplarEmprestimo.setId(678901234);
+        System.out.println(exemplarEmprestimo.getId());
 
-
+        Exemplar02 exemplar = new Exemplar02();
+        exemplar.setId(789012345);
+        System.out.println(exemplar.getId());
 
    
 	}
